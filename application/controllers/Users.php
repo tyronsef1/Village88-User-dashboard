@@ -21,8 +21,8 @@ class Users extends CI_Controller {
 	public function index()
 	{
 		echo "Hello World!";
-        $this->load->view('templates/header.php');
-		$this->load->view('dashboard/homepage.php');
+        $this->load->view('templates/dashboard_header.php');
+		$this->load->view('dashboard/adminpage.php');
 	}
 
     public function signin()
