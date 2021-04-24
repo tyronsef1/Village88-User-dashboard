@@ -97,4 +97,34 @@ class Users extends CI_Controller {
 		$this->load->view('templates/dashboard_header.php');
 		$this->load->view('users/dashboard_admin.php', $dashboard);
 	}
+
+	public function new()
+	{
+		echo "i'm new";
+		$this->load->view('templates/dashboard_header.php');
+		$this->load->view('users/new');
+	}
+
+	public function process_add()
+	{
+		$this->load->library('form_validation');
+		$this->form_validation->set_error_delimiters("<p class='text-danger'>","</p>");
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+		$this->form_validation->set_rules('first_name', 'First Name', 'required');
+		$this->form_validation->set_rules('last_name', 'Last Name', 'required');
+        $this->form_validation->set_rules('password', 'Password', 'required');
+		$this->form_validation->set_rules('password_conf', 'Confirmation Password', 'required|matches[password]');
+		if(!$this->form_validation->run())
+		{
+			$this->session->set_flashdata('errors', validation_errors());
+			redirect('users/new');
+		}
+		else
+		{
+			$this->load->model('User');
+            $this->User->create_user($this->input->post());
+			$this->session->set_flashdata('register_success', "<p class='text-success'>You have successfully added a new user!</p>");
+			redirect('users/new');
+		}
+	}
 }

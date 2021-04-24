@@ -5,7 +5,7 @@
             <h1>Manage Users</h1>
         </div>
         <div class="col-xs-6 col-md-2">
-            <a class="btn btn-primary" href="">Add new</a>
+            <a class="btn btn-primary" href="../users/new">Add new</a>
         </div>
     </div>
     <table class="table table-striped table-light">
