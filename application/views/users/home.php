@@ -1,7 +1,7 @@
     <div class="p-5 mb-4 bg-light rounded-3">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Welcome to the test</h1>
-        <p class="col-md-8 fs-4">We're going to build a cool application using a MVC framework! this application was built with the Village88 folks!</p>
+        <p class="col-md-8 fs-4">We're going to build a cool application using a MVC framework! This application was built with the Village88 folks!</p>
         <a class="btn text-light bg-primary" href="../users/signin">Start</a>
       </div>
     </div>

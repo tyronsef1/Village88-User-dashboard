@@ -22,7 +22,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </div>
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" aria-current="page" href="../users/signin">Signin</a>
+                    <a class="nav-link active" aria-current="page" href="../users/signin">Sign In</a>
                 </div>
             </div>
         </div>
